@@ -1,0 +1,3 @@
+# nicks that banned for querying IP addresses of other players
+bot
+Bot
