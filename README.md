@@ -1,6 +1,6 @@
 # gsbot #
 
-![GameSpy Logo](http://oystatic.ignimgs.com/src/core/img/widgets/gamespy/global/gamespy_masthead.gif)
+![Cossacks Logo](http://cdn.akamai.steamstatic.com/steam/apps/4850/header.jpg?t=1447353438)
 
 `bot` `chatbot` `gamespy` `cossacks` `messenger` `bot-logger` `bot-helper`
 
@@ -12,6 +12,8 @@
 [![Contributors List](https://img.shields.io/github/contributors/tbaltrushaitis/mp3web.svg)](https://github.com/tbaltrushaitis/mp3web/graphs/contributors)
 
 --------
+![GameSpy Logo](http://oystatic.ignimgs.com/src/core/img/widgets/gamespy/global/gamespy_masthead.gif)
+
 More than just a chatbot - well-known as **bot_asker** resident of online [GameSpy](http://www.gamespy.com/) server for [Cossacks: Back to War](https://steamcommunity.com/app/4850) real-time strategy online matches.
 
 --------
