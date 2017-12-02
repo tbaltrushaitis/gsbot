@@ -5,9 +5,10 @@
 `bot` `chatbot` `gamespy` `cossacks` `messenger` `bot-logger` `bot-helper`
 
 --------
+
 ## Badges ##
 
-[![License](https://img.shields.io/badge/license-Apache 2.0-green.svg?style=flat)](https://github.com/tbaltrushaitis/gsbot/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-Apache2.0-green.svg?style=flat)](https://github.com/tbaltrushaitis/gsbot/blob/master/LICENSE)
 [![Contributors List](https://img.shields.io/github/contributors/tbaltrushaitis/mp3web.svg)](https://github.com/tbaltrushaitis/mp3web/graphs/contributors)
 
 --------
