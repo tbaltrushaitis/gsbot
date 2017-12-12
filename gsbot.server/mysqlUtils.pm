@@ -3,10 +3,10 @@ package mysqlUtils;
 use Net::MySQL;
 
 # CONFIG VARIABLES for MYSQL
-my $mysql_host		 = "/var/lib/mysql/mysql.sock";
-my $mysql_database = "gamespy";
-my $mysql_user		 = "collector";
-my $mysql_pw		   = "secret_password";
+my $mysql_host 			=	"/var/lib/mysql/mysql.sock";
+my $mysql_database	=	"gamespy";
+my $mysql_user 			= "collector";
+my $mysql_pw 				=	"secret_password";
 
 my $mysql_conn = Net::MySQL->new(
   # hostname => $mysql_host,   # Default use UNIX socket
