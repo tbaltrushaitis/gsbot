@@ -5,10 +5,13 @@ use Switch;
 use vars qw($ua $wp);
 
 my $ROOT_PATH = "/home/ubuntu/gsbot/gsbot.server";
+
+
 sub new {
   my $pkg = shift;
   return bless {}, $pkg;
 }
+
 
 sub get_ip {
   my ( $unused, $player_nick ) = @_;
@@ -23,6 +26,7 @@ sub get_ip {
   return $ip;
 }
 
+
 sub get_ip_all {
   my ( $unused, $player_nick_req ) = @_;
   my @ip_all = ("0.0.0.0");
@@ -33,6 +37,7 @@ sub get_ip_all {
   close( f_ip_all );
   return @ip_all;
 }
+
 
 sub get_id_all {
   my ( $unused, $player_nick_req ) = @_;
@@ -45,6 +50,7 @@ sub get_id_all {
   return @id_all;
 }
 
+
 sub get_id_all_gs {
   my ( $unused, $player_nick_req ) = @_;
   my @id_all = ("0");
@@ -55,6 +61,7 @@ sub get_id_all_gs {
   close( f_id_all );
   return @id_all;
 }
+
 
 sub get_ip_for_id {
   my ( $unused, $player_id_req ) = @_;
@@ -67,6 +74,7 @@ sub get_ip_for_id {
   return @ip_all;
 }
 
+
 sub get_nicks {
   my ( $unused, $player_ip ) = @_;
   system "$ROOT_PATH/sh/get_players_for_ip.sh '$player_ip'";
@@ -77,6 +85,7 @@ sub get_nicks {
   close( f_ip_nicks );
   return @ip_nicks;
 }
+
 
 sub get_id {
   my ( $unused, $player_nick ) = @_;
@@ -91,6 +100,7 @@ sub get_id {
   return $id;
 }
 
+
 sub get_last_visit {
   my ( $unused, $player_nick ) = @_;
   my $visit = "";
@@ -104,13 +114,15 @@ sub get_last_visit {
   return $visit;
 }
 
+
 sub get_names {
   use IO::Socket;
   my ( $self, $peer_addr ) = @_;
   my $sock = IO::Socket::INET->new(
     PeerAddr => $peer_addr || '69.10.30.243',
     PeerPort => 6667,
-    Proto => 'tcp' ) or die "could not make the connection";
+    Proto => 'tcp'
+  ) or die "could not make the connection";
 
   my $rand_nick = "asker_" . int(rand(1000));
   my $ret_str = "";
@@ -121,7 +133,7 @@ sub get_names {
   while (my $line = <$sock>) {
     my ($command, $text) = split(/ :/, $line);   # $text is the stuff from the ping or the text from the server
 
-    if ( $command eq 'PING'){
+    if ( $command eq 'PING') {
       # while there is a line break - many different ways to do this
       while ( (index($text,"\r") >= 0) || (index($text,"\n") >= 0) ){ chop($text); }
       print $sock "PONG $text\n";
@@ -143,7 +155,8 @@ sub get_names {
   return $ret_str ;
 }
 
-#-------------------------------------------------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
+
 sub get_time {
   my ($second, $minute, $hour, $dayOfMonth, $month, $yearOffset, $dayOfWeek, $dayOfYear, $daylightSavings) = localtime();
 
@@ -170,9 +183,9 @@ sub get_time {
 
   return $theTimeFull;
 }
-#------------------------------------------------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
 
-#-------------------------------------------------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
 sub get_date {
   my ($second, $minute, $hour, $dayOfMonth, $month, $yearOffset, $dayOfWeek, $dayOfYear, $daylightSavings) = localtime();
 
@@ -189,7 +202,7 @@ sub get_date {
 
   return $theDate;
 }
-#------------------------------------------------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
 
 sub get_full_name {
   my ( $unused, $player_nick ) = @_;
