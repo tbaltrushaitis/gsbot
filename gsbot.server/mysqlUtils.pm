@@ -9,16 +9,18 @@ my $mysql_user 			= "collector";
 my $mysql_pw 				=	"secret_password";
 
 my $mysql_conn = Net::MySQL->new(
-  # hostname => $mysql_host,   # Default use UNIX socket
+	# hostname => $mysql_host,   # Default use UNIX socket
 	database => $mysql_database,
 	user     => $mysql_user,
-  password => $mysql_pw
+	password => $mysql_pw
 );
 
+
 sub new {
-  my $pkg = shift;
-  return $pkg;
+	my $pkg = shift;
+	return $pkg;
 }
+
 
 sub mysql_log_join {
 
@@ -46,7 +48,9 @@ sub mysql_log_join {
 	$mysql_insert_query .= " );";
 
 	$mysql_conn->query( $mysql_insert_query );
+
 }
+
 
 sub mysql_log_part {
 
@@ -74,6 +78,7 @@ sub mysql_log_part {
 	$mysql_insert_query .= " );";
 
 	$mysql_conn->query( $mysql_insert_query );
+
 }
 
 1;

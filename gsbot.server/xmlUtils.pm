@@ -44,13 +44,13 @@ sub download_rss_feeds {
   my $feeds_downloaded = 0;
 
   open( f_rss_feeds, "$ROOT_PATH/conf/rss_feeds.txt" ) or die("RSS feeds file does not exist");
-    my @rss_feeds = (<f_rss_feeds>);
+  my @rss_feeds = (<f_rss_feeds>);
   close( f_rss_feeds );
 
   foreach (@rss_feeds) {
-  	my $rss_feeds_line = $_;
-  	chomp($rss_feeds_line);
-  	my $rss_file = $rss_feeds_line;
+    my $rss_feeds_line = $_;
+    chomp($rss_feeds_line);
+    my $rss_file = $rss_feeds_line;
 
     $rss_file =~ s/http:\/\/// ;
     $rss_file =~ s/\//_/g ;
@@ -64,10 +64,10 @@ sub download_rss_feeds {
     if ($rss_file_size) {
       $feeds_downloaded++;
     }
-
   }
 
   return $feeds_downloaded;
+
 }
 
 
@@ -99,7 +99,7 @@ sub get_rss_line {
     my @items_array = $xpath->find('//item')->get_nodelist ;
     my $rss_items_count = scalar( @items_array );
     my $rss_item_rand = int(rand($rss_items_count));
-    if ( $rss_item_rand eq 0 ){
+    if ( $rss_item_rand eq 0 ) {
       $rss_item_rand = 1;
     }
     my $item_count = 0;
@@ -145,7 +145,7 @@ sub get_bash_rss_line {
     my $cur_description = "";
     my $rss_items_count = scalar( $xpath->find('//item')->get_nodelist );
     my $rss_item_rand = int( rand( $rss_items_count ) );
-    if ( $rss_item_rand eq 0 ){
+    if ( $rss_item_rand eq 0 ) {
       $rss_item_rand = 1;
     }
 
