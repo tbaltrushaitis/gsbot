@@ -34,6 +34,6 @@ More than just a chatbot - well-known as **bot_asker** resident of online [GameS
 
 ---
 
-> Developed during free time during night duties as a *Network operations* in **Magento Go** project of [Magento](http://bit.ly/mage-off) company in **2011 - 2012**
+> Developed while having free time during night shifts as a *Network operations* in **Magento Go** project of [Magento](http://bit.ly/mage-off) company in **2011 - 2012**
 
 :scorpius:
